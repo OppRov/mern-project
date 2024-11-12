@@ -32,7 +32,7 @@ export const useProductStore = create((set) => ({
             return { success: false, message: data.message }
         }
         set((state) => ({ products: state.products.filter((product) => product._id !== id) }))
-        return { success: true, message: data.messag }
+        return { success: true, message: data.message }
     },
     updateProduct: async (pid, updatedProduct) => {
         const res = await fetch(`/api/products/${pid}`, {
