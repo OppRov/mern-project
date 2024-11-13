@@ -1,13 +1,16 @@
-import React from 'react'
+import React, { useLayoutEffect, useState } from 'react'
 import { Button, Container, Flex, HStack, Text, useColorMode } from '@chakra-ui/react'
 import { Link } from 'react-router-dom'
 import { PlusSquareIcon } from '@chakra-ui/icons'
 import { IoMoon } from 'react-icons/io5'
 import { LuSun } from 'react-icons/lu'
+import { IoLogInOutline } from 'react-icons/io5'
+
 
 const Navbar = () => {
 
     const { colorMode, toggleColorMode } = useColorMode("light")
+
 
     return (
         <Container maxW={"1140px"} px={4}>
@@ -32,9 +35,14 @@ const Navbar = () => {
                 </Text>
 
                 <HStack spacing={2} alignItems={"center"}>
-                    <Link to={"/create"}>
+                    {<Link to={"/create"}>
                         <Button>
                             <PlusSquareIcon fontSize={20} />
+                        </Button>
+                    </Link>}
+                    <Link to={"/login"}>
+                        <Button>
+                            <IoLogInOutline fontSize={20} />
                         </Button>
                     </Link>
                     <Button onClick={toggleColorMode}>

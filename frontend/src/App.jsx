@@ -3,7 +3,7 @@ import { Routes, Route } from "react-router-dom"
 import HomePage from "./pages/HomePage"
 import CreatePage from "./pages/CreatePage"
 import Navbar from './components/Navbar'
-import ProductCard from "./components/ProductCard"
+import LoginPage from "./pages/LoginPage"
 
 
 function App() {
@@ -14,6 +14,7 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/create" element={<CreatePage />} />
+        <Route path="/login" element={<LoginPage />} />
       </Routes>
     </Box>
 
